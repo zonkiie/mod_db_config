@@ -199,7 +199,7 @@ static const char *exec_sql(cmd_parms * cmd, void *dummy, const char *arg)
 		{
 			char * col = (char*)apr_dbd_get_entry(apr_driver, row, i);
 			line = apr_pstrcat(cmd->temp_pool, line, " ", col, NULL);
-			//debug_printf("Col %d: %s, line: %s\n", i, col, line);
+			//fprintf(stderr, "Col %d: %s, line: %s\n", i, col, line);
 		}
 		
 		line = apr_pstrcat(cmd->temp_pool, line, "\n", NULL);
