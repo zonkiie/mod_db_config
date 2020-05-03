@@ -22,10 +22,12 @@ If using the apache module, you should know what you are doing!
 
 ## Example apache config file /etc/apache2/mods-available/db_config.conf
 ### Without a Macro
+
 	DBC_DBDriver "sqlite3"
 	DBC_DBDSN "/dev/shm/mydb.sqlite"
 	ExecuteSQL "select '<VirtualHost *:80>'||x'0a'||'ServerName ' || vhost_name ||x'0a'||'DocumentRoot ' || target || x'0a'||'</VirtualHost>'||x'0a' as vhostdata from vhosts;"
 ### With a Macro
+
 	DBC_DBDriver "sqlite3"
 	DBC_DBDSN "/dev/shm/mydb.sqlite"
 
