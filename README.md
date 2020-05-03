@@ -57,7 +57,6 @@ see create_db.sh
 
 ## Note
 I recommend it to use macros. Remember to activate mod_macro.
-The old version of mod_db_config with an integrated template engine remains in the archive.
 
 ## Hints for independent operation from database server
 One possibility is to use a file-based Database System like sqlite. Maybe there are alternatives to sqlite.
