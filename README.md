@@ -42,6 +42,7 @@ If using the apache module, you should know what you are doing!
 	ExecuteSQL "select 'Use Vhost_NonSSL myexample2.com '||x'0a' as vhostdata;"
 
 The x'0a' is an expression in sqlite to add a line break. Look in the manual of your prefered database how to add a linebreak to the created string if you use other database systems.
+See also the example config-file [db_config.conf](db_config.conf)
 
 ## Description
 Every Line which contains an ExecuteSQL Command is replaced with the Database Result of this query.
@@ -61,4 +62,8 @@ The old version of mod_db_config with an integrated template engine remains in t
 ## Hints for independent operation from database server
 One possibility is to use a file-based Database System like sqlite. Maybe there are alternatives to sqlite.
 You can use postgres with sqlite by using the fdw Wrapper for sqlite. So you can use sqlite from postgres and store your vhost-table in sqlite.
+
+## Apache (apr) API Reference
+  * [https://ci.apache.org/projects/httpd/trunk/doxygen/index.html](https://ci.apache.org/projects/httpd/trunk/doxygen/index.html)
+  * [https://apr.apache.org/docs/apr-util/1.6/index.html](https://apr.apache.org/docs/apr-util/1.6/index.html)
 
