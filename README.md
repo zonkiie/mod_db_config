@@ -14,9 +14,9 @@ If using the apache module, you should know what you are doing!
 
 ## How to compile
  * Build
-	make
+    make
  * Install
-	make install
+    make install
 
 ## Example apache config file /etc/apache2/mods-available/db_config.conf
 ### Without a Macro
