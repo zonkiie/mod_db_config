@@ -44,7 +44,8 @@ If using the apache module, you should know what you are doing!
 	ExecuteSQL "select 'Use Vhost_NonSSL myexample2.com '||x'0a' as vhostdata;"
 
 The x'0a' is an expression in sqlite to add a line break. Look in the manual of your prefered database how to add a linebreak to the created string if you use other database systems.
-See also the example config-file [db_config.conf](db_config.conf)
+See also the example config-file [db_config.conf](db_config.conf).
+Please don't forget to add the config file and enable the configuration.
 
 ## Description
 Every Line which contains an ExecuteSQL Command is replaced with the Database Result of this query.
@@ -59,6 +60,8 @@ see create_db.sh
 
 ## Note
 I recommend it to use macros. Remember to activate mod_macro.
+Changes in the database are only effective after a restart of the apache webserver.
+If I get enough knowlege of the apache internals or someone helps, I try to add vhosts dynamically.
 
 ## Hints for independent operation from database server
 One possibility is to use a file-based Database System like sqlite. Maybe there are alternatives to sqlite.
